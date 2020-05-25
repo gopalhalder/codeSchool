@@ -82,12 +82,14 @@
     }
   }
 
+  // CARD ALL TEXT
   &__data {
     background-color: $color-white;
     padding: 2rem 2rem;
     position: relative;
   }
 
+  //CARD TITLE
   &__title {
     text-transform: uppercase;
     font-size: 3rem;
@@ -102,6 +104,8 @@
     color: $color-gray-mid;
     margin: 0.4rem 0 1.5rem 0;
   }
+
+  // CARD PARAGRAPH
 
   &__description {
     position: relative;

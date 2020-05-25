@@ -8,7 +8,7 @@
     border: 1px solid transparent;
     transition: all 0.3s;
   }
-
+// HEADER BUTTON
   &--big {
     background-color: $nav-btn-color-one;
     color: $color-white;
@@ -60,6 +60,7 @@
     }
   }
 
+  //NAVIGATION BUTTON
   &--nav {
     font-weight: 700;
     font-size: $default-font-size;
@@ -132,6 +133,7 @@
   }
 }
 
+// ICON BUTTON
 .icon-btn {
   display: flex;
   border: none;

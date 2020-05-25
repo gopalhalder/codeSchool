@@ -1,5 +1,6 @@
 .feature-box {
   &__container {
+    // FUNCTIONALITY
     position: relative;
     background-color: rgba($color-white, 0.9);
     border-radius: 3px;
@@ -37,6 +38,7 @@
         transition: all 0.5s ease;
       }
 
+      // font part style
       &--font {
         font-size: 8rem;
         background-image: linear-gradient(to right, $color-green, $color-cyan);

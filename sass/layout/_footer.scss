@@ -1,0 +1,130 @@
+.footer {
+  font-size: 1.5rem;
+  color: rgba($color-white, 0.9);
+  padding: 15rem 0 10rem 0;
+  background: $color-gray-dark; //$gradient-4;
+
+  &__subcription-box {
+    text-align: center;
+    width: 45%;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    padding: 7.5rem 10rem;
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      & {
+        -webkit-backdrop-filter: saturate(1.8) blur(1rem);
+        backdrop-filter: saturate(1.8) blur(1rem);
+        background-color: rgba($color-white, 0.5);
+      }
+    }
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-gray-light-1;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-gray-light-1;
+      font-size: 1.7rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      background-color: $color-gray-dark;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      transform: rotate(5deg) scale(1.3);
+      box-shadow: 0 0rem 1rem rgba($color-black, 0.4);
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid $color-gray-light-1;
+    padding-top: 2rem;
+    width: 80%;
+    float: right;
+  }
+}
+
+.subscribe {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  border-radius: 10rem;
+  transition: all 0.3s;
+
+  &:focus-within {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+  }
+
+  &__field {
+    background: none;
+    width: 30.5rem;
+    color: $color-gray-dark-3;
+    border: none;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-family: "Roboto";
+
+    &:focus {
+      outline: none;
+    }
+
+    &:placeholder {
+      color: $color-gray-dark;
+    }
+  }
+
+  &__btn {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: 1.8rem 3rem;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-image: $gradient-2;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.05);
+      outline: none;
+    }
+  }
+
+  &__icon {
+    vertical-align: middle;
+    font-size: 2rem;
+    color: $color-white;
+  }
+
+  span {
+    margin-left: 0.5rem;
+  }
+}

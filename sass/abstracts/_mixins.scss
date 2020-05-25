@@ -1,0 +1,54 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin pattern-top {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    height: 10px;
+    background: url(../img/top-pattern.png) repeat scroll 0 0px;
+    width: 100%;
+  }
+}
+
+@mixin pattern-bottom {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background: url(../img/pattern.png) repeat scroll 0 0px;
+  }
+}
+
+@mixin border($top, $left) {
+  &::after {
+    background: $color-gray-light none repeat scroll 0 0;
+    content: "";
+    height: 3rem;
+    top: $top; //60%
+    left: $left; //45%
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    width: 1px;
+  }
+}
+
+@mixin pubBox($transform, $top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transform: $transform;
+  transition: all 0.6s ease-out;
+}

@@ -1,0 +1,167 @@
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 700;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &--big {
+    background-color: $nav-btn-color-one;
+    color: $color-white;
+    position: relative;
+    padding: 0.8rem 3rem;
+    font-size: 1.6rem;
+    border-radius: 10rem;
+
+    &:hover {
+      padding: 0.8rem 5rem;
+    }
+
+    &:active {
+      color: rgba($color-white, 0.75);
+      transform: translateY(0.2rem);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 1.3rem);
+      height: calc(100% + 1.3rem);
+      border-radius: inherit;
+      border: 3px solid $nav-btn-color-one;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.7s;
+    animation-fill-mode: backwards;
+  }
+
+  &--radius {
+    border-radius: 10rem;
+    font-size: $default-font-size;
+    padding: 1rem 4rem;
+    backdrop-filter: blur(0.5rem);
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+    }
+    &:active {
+      transform: translateY(0.1rem);
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
+    }
+  }
+
+  &--nav {
+    font-weight: 700;
+    font-size: $default-font-size;
+    color: $color-white;
+    padding: 1rem 3rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    &-one {
+      background-color: $nav-btn-color-one;
+    }
+    &-two {
+      background-color: $nav-btn-color-two;
+    }
+    &-three {
+      background-color: $nav-btn-color-three;
+    }
+    &-four {
+      background-color: $nav-btn-color-four;
+    }
+    &-five {
+      background-color: $nav-btn-color-five;
+    }
+    &-six {
+      background-color: $nav-btn-color-six;
+    }
+    &-saven {
+      background-color: $nav-btn-color-seven;
+    }
+    &:hover,
+    &:active {
+      color: $color-gray-dark;
+    }
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+  }
+}
+
+// CARD BUTTONS
+.cta {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+
+  &--btn {
+    background-image: linear-gradient(to right, $color-green, $color-cyan);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+
+    &::before {
+      content: "";
+      left: 0;
+      bottom: -0.5rem;
+      position: absolute;
+      width: 100%;
+      height: 0.2rem;
+      background-image: linear-gradient(to right, $color-green, $color-cyan);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.icon-btn {
+  display: flex;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  border-radius: 3px;
+  font-weight: 500;
+  color: $color-white;
+  background-color: #00ad9f;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #19c9ba;
+  }
+
+  &:not(.icon-btn--active) {
+    transform: scale(1);
+  }
+
+  &--active {
+    transform: scale(1.08);
+    background-color: #19c9ba;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  span {
+    margin-left: 0.6rem;
+  }
+}

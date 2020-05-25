@@ -1,0 +1,159 @@
+.story {
+  position: relative;
+
+  &__container {
+  }
+
+  &__carosel {
+    overflow: hidden;
+  }
+
+  &__slider {
+    display: flex;
+    width: 400%;
+    transition: all 1s;
+  }
+
+  &__section {
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  &__content {
+    background-image: linear-gradient(-10deg, #185a85, #129c9d);
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 5rem;
+    background-color: $color-white;
+    flex: 0 0 55%;
+
+    &--text {
+      color: rgba($color-white, 0.9);
+      margin: 2.5rem 0 6rem 0;
+      text-shadow: 0 2px 20px rgba($color-black, 0.16);
+      blockquote {
+        width: 90%;
+        margin: 0 auto;
+        line-height: 1.6;
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: "Roboto";
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 10rem;
+          height: 0.6rem;
+          display: block;
+          top: 110%;
+          left: 50%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+
+          border-radius: 20rem;
+          background-color: rgba($color-gray-light, 0.4);
+        }
+
+        &::after {
+          color: rgba($color-gray-light, 0.6);
+          content: "\201c";
+          font-size: 20rem;
+          font-weight: 700;
+          position: absolute;
+          top: -9.7rem;
+          left: -1rem;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__author {
+    text-align: right;
+    color: rgba($color-gray-light, 0.9);
+    text-transform: uppercase;
+    line-height: 1.4;
+    &--name {
+      display: block;
+      font-size: $default-font-size;
+      font-weight: 600;
+    }
+
+    &--position {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    color: $color-gray-light-1;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  &__btn-box {
+    padding-top: inherit;
+  }
+
+  &__btn:link,
+  &__btn:visited {
+    color: rgba($color-white, 0.9);
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid rgba($color-white, 0.9);
+  }
+
+  &__btn:hover {
+    background-color: rgba($color-white, 0.9);
+    color: $color-gray-dark;
+  }
+
+  &__photo {
+    flex: 0 0 45%;
+    overflow: hidden;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &--img {
+      background-size: cover;
+      height: 100%;
+
+      &-1 {
+        background-position: 0;
+        background-image: url(../img/person-large-1.jpg);
+      }
+
+      &-2 {
+        background-position: 100%;
+        background-image: url(../img/person-large-2.jpg);
+      }
+
+      &-3 {
+        background-position: 50%;
+        background-image: url(../img/person-large-3.jpg);
+      }
+
+      &-4 {
+        background-position: 100%;
+        background-image: url(../img/person-large-4.jpg);
+      }
+    }
+  }
+
+  &__arrow {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover &__arrow {
+    opacity: 1;
+  }
+
+  &__dot {
+    position: absolute;
+    bottom: 2rem;
+    left: 8rem;
+  }
+}

@@ -1,0 +1,182 @@
+.nav {
+  background-color: $color-orange;
+  position: relative;
+  color: $color-white;
+  font-weight: 600;
+  font-size: 2rem;
+  @include pattern-bottom;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-gray-light;
+    }
+  }
+
+  &__container {
+    padding: 1rem 0;
+  }
+
+  &__left {
+    float: left;
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__right {
+    list-style: none;
+    float: right;
+    position: relative;
+
+    @include border(60%, 45%);
+
+    li {
+      display: inline-block;
+      font-size: 1.8rem;
+
+      &:not(:last-child) {
+        margin-right: 3.5rem;
+      }
+    }
+  }
+}
+
+.section-blog {
+  padding: 20rem 0;
+}
+
+.section-features {
+  position: relative;
+  @include pattern-top;
+
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      rgba($color-black, 0.8),
+      rgba($color-black, 0.8)
+    ),
+    url(../img/geometry.jpg);
+  background-size: cover;
+  @include pattern-bottom;
+}
+
+.section-about {
+  padding: 20rem 0;
+  background-color: $color-gray-light-1;
+  position: relative;
+  @include pattern-bottom;
+}
+
+.section-gallery {
+  padding: 20rem 0;
+}
+
+.section-teachers {
+  @include pattern-top;
+  position: relative;
+  padding: 20rem 0;
+  background-color: $color-gray-light-1;
+  @include pattern-bottom;
+}
+
+.section-event {
+  padding: 20rem 0;
+}
+
+.section-story {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-white, 0.85),
+      rgba($color-white, 0.85)
+    ),
+    url(../img/alchemy.gif);
+}
+
+.section-ad {
+  padding: 15rem 0;
+}
+
+/// advertisement section
+.ad {
+  &__logo {
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__pub {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4;
+    &--name {
+      font-size: 3.5rem;
+      font-weight: 600;
+      display: block;
+
+      &-color {
+        color: $nav-btn-color-one;
+      }
+    }
+
+    &--position {
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+}
+/*
+.section-mission {
+  padding: 20rem 0;
+}
+
+.color-black {
+  background: #fb527a;
+  //width: 60%;
+  padding: 7% 20% 10% 20%;
+  color: $color-white;
+}
+
+.white-block {
+  background: #ccc;
+  //width: 60%;
+  padding: 7% 20% 10% 20%;
+  color: #1d1c1c;
+}
+
+.color-black h1,
+.white-block h1 {
+  font-size: 8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.scallop-down {
+  height: 94px;
+  width: 100%;
+  background: -webkit-gradient(
+    radial,
+    50% 0,
+    13,
+    50% 30,
+    12,
+    from(#fb527a),
+    color-stop(0.49, #fb527a),
+    color-stop(0.53, transparent),
+    to(transparent)
+  );
+  background-size: 20px 100%;
+}
+*/

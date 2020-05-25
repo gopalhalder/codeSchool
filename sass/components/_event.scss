@@ -1,0 +1,130 @@
+.event {
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $color-gray-light-2;
+  box-shadow: 0 0 1rem 0.1rem rgba($color-black, 0.1);
+
+  &__img {
+    background-size: cover;
+    height: 25rem;
+    &--1 {
+      background-image: url(../img/kids-playing-1.jpg);
+    }
+
+    &--2 {
+      background-image: url(../img/kids-playing-2.jpg);
+    }
+
+    &--3 {
+      background-image: url(../img/kids-playing-3.jpg);
+    }
+  }
+
+  &__details {
+    padding: 2rem;
+    display: flex;
+    position: relative;
+
+    &--time {
+      padding-right: 2rem;
+      position: relative;
+      font-size: 2rem;
+
+      &::before {
+        background: $color-orange;
+        height: 90%;
+        top: 5%;
+        position: absolute;
+        right: 0;
+        content: "";
+        width: 1px;
+      }
+
+      span {
+        color: $color-orange-dark;
+        font-weight: 600;
+      }
+
+      &-date {
+        font-size: 5rem;
+        line-height: 3rem;
+      }
+    }
+
+    &--location {
+      ul {
+        list-style: none;
+        margin-left: 1.5rem;
+
+        li {
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 2.2rem;
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 1px;
+      width: 80%;
+      bottom: 0;
+      left: 10%;
+      background-color: $color-gray-mid;
+    }
+  }
+
+  &__name {
+    padding: 2.5rem;
+
+    p {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-light-blue;
+      }
+    }
+  }
+
+  &__btn {
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        flex-basis: 50%;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+        color: $color-white;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: $nav-btn-color-one;
+          &:hover {
+            background-color: rgba($nav-btn-color-one, 0.8);
+          }
+        }
+
+        &:last-child {
+          background-color: $nav-btn-color-seven;
+          &:hover {
+            background-color: rgba($nav-btn-color-seven, 0.8);
+          }
+        }
+        a {
+          font-size: $default-font-size;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

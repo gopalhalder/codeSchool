@@ -1,0 +1,137 @@
+.card {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 0.5s ease-in-out;
+
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.2rem 0.2rem 0.02rem rgba($color-black, 0.04),
+    0 -0.2rem 0.2rem 0.02rem rgba($color-black, 0.04),
+    -0.2rem 0 0.2rem 0.02rem rgba($color-black, 0.04),
+    0.2rem 0 0.2rem 0.02rem rgba($color-black, 0.04);
+
+  &__hero {
+    flex: 0 0 50%;
+    overflow: hidden;
+    position: relative;
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      z-index: -1;
+      transition: all 1.5s;
+
+      &--1 {
+        background-image: url(../img/10.jpg);
+      }
+      &--2 {
+        background-image: url(../img/children-2.jpg);
+      }
+    }
+  }
+
+  &__publisher {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-black, 0.6),
+      rgba($color-white, 0.4)
+    );
+    width: 60%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-white;
+    text-transform: capitalize;
+    transform: translate(-100%);
+    transition: all 1s;
+
+    &--author {
+      @include pubBox(translateY(-1.5rem), 10%, 15%);
+      &:hover {
+        color: rgba($color-white, 0.75);
+      }
+    }
+
+    &--date {
+      @include pubBox(translateY(3rem), 20%, 17%);
+    }
+
+    & i {
+      margin-right: 1rem;
+    }
+  }
+
+  &:hover {
+    .card__hero-img {
+      transform: scale(1.05);
+    }
+
+    .card__publisher {
+      transform: translate(-8%) skewX(-7deg);
+
+      &--author,
+      &--date {
+        transform: translateY(0) skewX(7deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__data {
+    background-color: $color-white;
+    padding: 2rem 2rem;
+    position: relative;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-gray-mid;
+    margin: 0.4rem 0 1.5rem 0;
+  }
+
+  &__description {
+    position: relative;
+    font-size: $default-font-size;
+    font-weight: 500;
+    margin: 1rem 0;
+
+    &::first-letter {
+      margin-left: 1rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -0.4rem;
+      left: 0;
+      width: 0.6rem;
+      height: 2.5rem;
+      background: linear-gradient(
+        to top left,
+        $color-pink,
+        rgba($color-pink, 0.75)
+      );
+      border-radius: 2rem;
+      line-height: 1;
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
